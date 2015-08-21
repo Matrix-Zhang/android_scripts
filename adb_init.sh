@@ -30,7 +30,7 @@ fi
 
 echo "#This file is generate by matrix's scrpit." > $ini_file
 
-echo "$usb_devices" | awk '{print $6}' | sed -r -e 's/.*/0x&/' -e 's/:.*//' > $ini_file
+echo "$usb_devices" | awk '{print $6}' | sed -r -e 's/.*/0x&/' -e 's/:.*//' >> $ini_file
 
 echo "Everything is OK! You should run :"
 echo -e "\tsudo adb kill-server"
